@@ -1,0 +1,271 @@
+@font-face { 
+	font-family: "Compagnon Light"; 
+	src: url(.../Compagnon-Light.otf); 
+	font-family: "Compagnon Light Italic";
+	src: url(.../Compagnon-Lightitalic.otf);
+	font-family: "Blocus";
+	src: url(.../Blocus.otf);
+}
+
+
+body {
+/*border: 30px solid #ADEAFD;*/
+font-family: "Compagnon Light";
+/*background-image: url(../images/background.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;*/
+background-color: #F2FBA3;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+/*----------columns------------------*/
+
+.imglink img:hover{
+	background-image: url(../images/hover.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+} 
+
+.column-l {
+  width: 45%;
+  height: 100vh;
+  position: relative;
+
+}
+
+.column-l img{
+	padding-top: 4%;
+	padding-left: 4%;
+	position: absolute;
+	height: 85vh;
+}
+
+
+.column-r {
+  width: 45%;
+  height: 100vh;
+  position: relative;
+}
+
+.column-r img{}
+
+
+/*-------------within columns-----------------*/
+
+p{
+	font-size: 1em;
+}
+
+.paragraph{ 
+	background-image: url(../images/textback.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(218, 224, 207, .5);
+	overflow: auto;
+	position: absolute;
+	width: 85%; 
+	height: 40%;
+	line-height: 1.3em;
+	padding: 7%;
+	bottom: 14%;
+	right: .2%; 
+	/*can also put under .paragraph p for now and they make it look different*/
+
+}
+.paragraph p{
+	/*line-height: 20px;
+	padding: 7%;
+	bottom: 14%;
+	right: .2%;*/
+	overflow-wrap: break-word;
+}
+
+.paragraph img{
+	max-width: 100%;
+}
+
+.paragraph::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.paragraph::-webkit-scrollbar:vertical {
+    width: 11px;
+
+}
+
+.paragraph::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: #A0A0A0;
+    } /* should match background, can't be transparent */
+
+/* This is another area where I'm having trouble. 
+I can't seem to get it to be where the typed header is.
+.header{
+	position: absolute;
+	top: 50px;
+	right: 20px;
+}
+
+.header img{
+	width: 50%;
+}*/
+
+
+.pimg{}
+
+.pimg img{
+	max-width: 100%;
+}
+
+
+h1{
+	text-align: left;
+	font-family: "Blocus";
+	font-size: 6em;
+	width: 80%;
+	position: absolute;
+	/*background-image: url(../images/textback.png);*/
+}
+
+h2{
+	text-align: left;
+	font-family: "Blocus";
+	font-size: 4em;
+	width: 80%;
+}
+
+.box{
+	width: 50%;
+	position: relative;
+	padding: 2%;
+	float: left;
+}
+
+.teeth{
+	width: 90%;
+	padding: 2%;
+}
+
+.diagram{
+	width: 60%;
+	padding: 2%;
+	float: right;
+}
+
+.comic{}
+
+.comic img{
+width: 45%;
+padding: 1.5%;
+}
+
+/*--------vend subpage -----------------*/
+
+.products{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	padding-bottom: 5%;
+}
+
+.products img{
+	/*height: 275px;*/
+	width: 32vw;
+}
+
+.products a:hover{
+	background-image: url(../images/hover.png);
+	background-size: 100%;
+}
+
+
+/*----------------navbar--------------------*/
+
+nav {
+	text-align: left;
+	background-color: #CEF487;
+	padding: 1%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+
+}
+.navitems{
+	display: flex;
+	justify-content: space-around;
+	
+
+}
+
+.navlink{
+	display: inline-block;
+	background-color: lightgray;/*#FE6E4C;*/
+	padding: 10px 30px 10px 30px;
+	align-items: center;
+	/*border-radius: 50px 15px ;*/
+	box-shadow: 5px 5px 5px gray;
+	font-family: "Blocus";
+	font-size: 1.5em;
+}
+
+.navlink a {
+	color: black;
+	text-decoration: none;
+}
+
+.navlink a:hover{
+	color: #CEF487;
+}
+
+/*.navimg img{
+	width: 500px;
+	display: inline-block;
+	align-items: right;
+}*/
+
+.marquee{
+	width: 800px;
+	Height: 42px; /*it is this tall because my actual 
+	image is this tall. Should figure out a way to 
+	make it RWD but the positioning gets wonky when I
+	try to change the elements in the nav to absolute so I'm
+	just giving up on that for the moment.*/
+	overflow: hidden;
+
+}
+
+.marquee-content{
+	display: flex;
+	list-style: none;
+	animation: scrolling 10s linear infinite;
+}
+
+.marquee-item{
+	height: 42px;
+	width: 600px;
+	flex-shrink: 0;
+}
+
+.marquee-image{
+	height: 100%;
+	width: 100%;
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translatex(-1800px); }
+}
+
+
+
+
